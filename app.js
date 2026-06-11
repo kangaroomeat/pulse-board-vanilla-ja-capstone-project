@@ -8,34 +8,37 @@ const ulTag = document.createElement("ul");
 toDoCard.appendChild(ulTag);
 
 const testBtn = document.getElementById("test-btn");
+const popUpBox = document.querySelector(".pop-up");
 
 
 
 
 
 addTaskBtn.onclick=function() {
-    console.log("test");
+    createLiElement();
+    liTag.onmouseenter=function(){
+        setTimeout(() => {
+            console.log("hi");
+            popUpBox.style.display = "block";
+
+        }, 2000);
+        
+
+    }
+
+    liTag.onmouseleave=function() {
+        
+        popUpBox.style.display = "none";
+    }
+}
+
+function createLiElement() {
     liTag = document.createElement("li");
-    liTag.innerText = "li tag test";
+    liTag.innerText = "li tag";
     ulTag.appendChild(liTag);
     liTag.setAttribute("contentEditable", "true");
-    
 
 }
 
-testBtn.onclick=function() {
-    const element = document.querySelector("li");
-if(element) {
-    console.log("element exists");
-    element.onclick=function() {
-        console.log("clicked");
-    }
-} else {
-    console.log("element not found");
-}
-
-
-
-}
 
 
