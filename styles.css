@@ -5,7 +5,7 @@
 }
 
 .task-board {
-    background-color: green;
+    background-color: rgb(42, 43, 42);
     display: flex;
     justify-content: space-between;
     padding: 20px;
@@ -14,7 +14,7 @@
 
 }
 .card {
-    background-color: aliceblue;
+    background-color: rgb(215, 227, 238);
     width: 30%;
     height: 400px;
     /*margin: 20px;*/
@@ -25,15 +25,32 @@
 
 .add-task-btn {
     
-    background-color: red;
+    /*background-color: red;*/
+
+}
+
+.add-task-btn button {
+    background-color: rgb(110, 110, 235);
+    color: white;
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.add-task-btn button:hover {
+    background-color: rgb(142, 142, 226);
 }
 
 li {
-    background-color: pink;
+    background-color: white;
+    margin-bottom: 5px;
 }
 
 ul {
-    background-color: yellow;
+    /*background-color: yellow;*/
     list-style: none;
 }
 
@@ -49,6 +66,7 @@ select {
     padding: 20px;
     margin: 0 auto;
     text-align: center;
-    display: none;
+    /*display: none;*/
+    display: block;
 }
 

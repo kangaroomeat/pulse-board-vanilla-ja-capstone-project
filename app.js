@@ -4,6 +4,8 @@ var addTaskBtn = document.querySelector(".add-task-btn");
 
 var toDoCard = document.querySelector(".to-do");
 
+var inProgressCard = document.querySelector(".in-progress");
+
 const ulTag = document.createElement("ul");
 toDoCard.appendChild(ulTag);
 
@@ -16,18 +18,23 @@ const popUpBox = document.querySelector(".pop-up");
 
 addTaskBtn.onclick=function() {
     createLiElement();
+    var timeOutId;
+
     liTag.onmouseenter=function(){
-        setTimeout(() => {
+           timeOutId =  setTimeout(() => {
             console.log("hi");
             popUpBox.style.display = "block";
 
         }, 2000);
+
+        console.log("timeout id: " + timeOutId);
         
 
     }
 
     liTag.onmouseleave=function() {
         
+        clearTimeout(timeOutId);
         popUpBox.style.display = "none";
     }
 }
@@ -38,6 +45,33 @@ function createLiElement() {
     ulTag.appendChild(liTag);
     liTag.setAttribute("contentEditable", "true");
 
+}
+
+const checkbox = document.querySelector("#addToProgress")
+
+function checkCheckbox() {
+    if(checkbox.checked) {
+        console.log("is checked");
+        return true;
+    } else {
+        console.log("is not checked");
+    }
+}
+
+testBtn.onclick=function(){
+
+    if(checkCheckbox()) {
+        console.log("checkbox value is: " + checkCheckbox());
+        pTag = document.createElement("p");
+        pTag.innerText = "this is some text";
+        inProgressCard.appendChild(pTag);
+
+      
+    }
+    
+    
+    
+    
 }
 
 
