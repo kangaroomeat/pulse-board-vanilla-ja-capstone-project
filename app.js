@@ -63,7 +63,7 @@ testBtn.onclick=function(){
     if(checkCheckbox()) {
         console.log("checkbox value is: " + checkCheckbox());
         pTag = document.createElement("p");
-        pTag.innerText = "this is some text";
+        pTag.innerText = ulTag;
         inProgressCard.appendChild(pTag);
 
       
@@ -75,7 +75,9 @@ testBtn.onclick=function(){
 }
 
 function transferFromToDoToInProgress() {
-    
+
+
+
 }
 
 
