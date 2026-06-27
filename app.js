@@ -18,7 +18,7 @@ const popUpBox = document.querySelector(".pop-up");
 
 addTaskBtn.onclick=function() {
     createLiElement();
-    var timeOutId;
+    /*var timeOutId;
 
     liTag.onmouseenter=function(){
            timeOutId =  setTimeout(() => {
@@ -36,7 +36,14 @@ addTaskBtn.onclick=function() {
         
         clearTimeout(timeOutId);
         popUpBox.style.display = "none";
-    }
+    }*/
+
+   liTag.ondblclick=function(){
+        console.log("double click works");
+        popUpBox.style.display="block";
+       
+
+   }
 }
 
 function createLiElement() {
@@ -62,9 +69,12 @@ testBtn.onclick=function(){
 
     if(checkCheckbox()) {
         console.log("checkbox value is: " + checkCheckbox());
-        pTag = document.createElement("p");
-        pTag.innerText = ulTag;
-        inProgressCard.appendChild(pTag);
+       /* pTag = document.createElement("p");
+        pTag.innerText = liTag;
+        inProgressCard.appendChild(pTag);*/
+        console.log(liTag);
+        inProgressCard.innerHTML = liTag;
+
 
       
     }
