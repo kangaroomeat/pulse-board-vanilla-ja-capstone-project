@@ -69,11 +69,11 @@ testBtn.onclick=function(){
 
     if(checkCheckbox()) {
         console.log("checkbox value is: " + checkCheckbox());
-       /* pTag = document.createElement("p");
-        pTag.innerText = liTag;
-        inProgressCard.appendChild(pTag);*/
+        pTag = document.createElement("p");
+        pTag.innerText = liTag.innerText;
+        inProgressCard.appendChild(pTag);
         console.log(liTag);
-        inProgressCard.innerHTML = liTag;
+        //inProgressCard.innerHTML = liTag;
 
 
       
