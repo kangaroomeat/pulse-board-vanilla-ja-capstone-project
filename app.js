@@ -41,6 +41,7 @@ addTaskBtn.onclick=function() {
    liTag.ondblclick=function(){
         console.log("double click works");
         popUpBox.style.display="block";
+
        
 
    }
@@ -73,11 +74,15 @@ testBtn.onclick=function(){
         pTag.innerText = liTag.innerText;
         inProgressCard.appendChild(pTag);
         console.log(liTag);
+        
         //inProgressCard.innerHTML = liTag;
 
 
       
     }
+
+    popUpBox.style.display = "none";
+    testBtn.style.display = "none";
     
     
     
@@ -88,6 +93,11 @@ function transferFromToDoToInProgress() {
 
 
 
+}
+
+checkbox.onclick=function() {
+    console.log("clicked");
+    testBtn.style.display="block";
 }
 
 
