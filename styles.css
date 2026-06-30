@@ -59,7 +59,8 @@ select {
 }
 
 .pop-up {
-    width: 100px;
+    /*width: 100px;*/
+    width: 10%;
     background-color: rgb(34, 33, 33);
     color: white;
     border-radius: 5px;
@@ -83,6 +84,8 @@ select {
     width: 10%;
     font-size: 17px;
     cursor: pointer;
+    margin-top: 15px;
+    margin-bottom: 15px;
 
 }
 
