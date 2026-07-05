@@ -72,6 +72,7 @@ testBtn.onclick=function(){
         console.log("checkbox value is: " + checkCheckbox());
         pTag = document.createElement("p");
         pTag.innerText = liTag.innerText;
+        liTag.style.display = "none";
         inProgressCard.appendChild(pTag);
         console.log(liTag);
         
@@ -81,8 +82,11 @@ testBtn.onclick=function(){
       
     }
 
+    popUpBox.checked = false;
+    popUpBox.dispatchEvent(new Event("change"));
     popUpBox.style.display = "none";
     testBtn.style.display = "none";
+   
     
     
     
