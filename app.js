@@ -93,6 +93,12 @@ testBtn.onclick=function(){
     
 }
 
+const deleteTask = document.getElementById("delete");
+
+deleteTask.onclick=function() {
+    console.log("delete task works");
+}
+
 function transferFromToDoToInProgress() {
 
 
