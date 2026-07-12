@@ -1,6 +1,7 @@
 //do somrhing with content editable
 
-var addTaskBtn = document.querySelector(".add-task-btn");
+//var addTaskBtn = document.querySelector(".add-task-btn");
+var addTaskBtn = document.querySelector("#task-btn");
 
 var toDoCard = document.querySelector(".to-do");
 
@@ -17,7 +18,9 @@ const popUpBox = document.querySelector(".pop-up");
 
 
 addTaskBtn.onclick=function() {
+    /*console.log("button pressed");*/
     createLiElement();
+    
     /*var timeOutId;
 
     liTag.onmouseenter=function(){
@@ -95,6 +98,7 @@ testBtn.onclick=function(){
 
 const deleteTask = document.getElementById("delete");
 
+/*if()
 deleteTask.onclick=function() {
     console.log("delete task works");
 }
@@ -103,12 +107,24 @@ function transferFromToDoToInProgress() {
 
 
 
-}
+}*/
 
 checkbox.onclick=function() {
     console.log("clicked");
     testBtn.style.display="block";
 }
 
+
+var radio1 = document.getElementById("radio1");
+var radio2 = document.getElementById("radio2");
+var confirmBtn = document.getElementById("confirm-button");
+
+confirmBtn.onclick=function(){
+    if(radio1){
+        console.log("radio1 is selected");
+    } else if(radio2){
+        console.log("radio2 is selected");
+    }
+}
 
 

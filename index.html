@@ -10,7 +10,7 @@
             <div class="task-board">
 
                 <div class="add-task-btn">
-                    <button>add task</button>
+                    <button id="task-btn">add task</button>
 
                 </div>
                 <div class="to-do card" >
@@ -39,6 +39,13 @@
                 <label for="addToProgress">Add task to "in progress" list</label><br>
                 <input type = "checkbox" id="delete" unchecked>
                 <label for="delete">delete task</label>
+            </div>
+
+            <div class="radio-check">
+
+                <input type="radio" name="options" value="add to in progress" id="radio1">add to in progress
+                <input type="radio" name="options" value="delete" id="radio2">delete
+                <button id="confirm-button">confirm</button>
             </div>
 
         </main>
