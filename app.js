@@ -118,13 +118,18 @@ checkbox.onclick=function() {
 var radio1 = document.getElementById("radio1");
 var radio2 = document.getElementById("radio2");
 var confirmBtn = document.getElementById("confirm-button");
+var selected = document.querySelector('input[name="options"]:checked');
+
+function checkSelection() {
+    if(selected){
+        console.log(`${selected.value} is selected`)
+    } else {
+        console.log("nothing is selected");
+    }
+}
 
 confirmBtn.onclick=function(){
-    if(radio1){
-        console.log("radio1 is selected");
-    } else if(radio2){
-        console.log("radio2 is selected");
-    }
+    checkSelection();
 }
 
 
