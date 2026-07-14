@@ -85,6 +85,12 @@ testBtn.onclick=function(){
       
     }
 
+    if(deleteTask()) {
+        console.log("it works!");
+    }
+
+
+
     popUpBox.checked = false;
     popUpBox.dispatchEvent(new Event("change"));
     popUpBox.style.display = "none";
@@ -96,8 +102,14 @@ testBtn.onclick=function(){
     
 }
 
-const deleteTask = document.getElementById("delete");
+const deleteTaskCheckbox = document.getElementById("delete");
 
+function deleteTask() {
+    if(deleteTaskCheckbox.checked) {
+        console.log("delete task is checked");
+        return true;
+    }
+}
 /*if()
 deleteTask.onclick=function() {
     console.log("delete task works");
@@ -118,11 +130,12 @@ checkbox.onclick=function() {
 var radio1 = document.getElementById("radio1");
 var radio2 = document.getElementById("radio2");
 var confirmBtn = document.getElementById("confirm-button");
-var selected = document.querySelector('input[name="options"]:checked');
+//const selected = document.querySelector('input[name="options"]:checked');
 
 function checkSelection() {
+    var selected = document.querySelector('input[name="options"]:checked');
     if(selected){
-        console.log(`${selected.value} is selected`)
+        console.log(`${selected.value} is selected.`);
     } else {
         console.log("nothing is selected");
     }
