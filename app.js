@@ -136,13 +136,27 @@ function checkSelection() {
     var selected = document.querySelector('input[name="options"]:checked');
     if(selected){
         console.log(`${selected.value} is selected.`);
+        if(`${selected.value}` === "add to in progress") {
+            console.log("one");
+            return true;
+        } else if(`${selected.value}` === "delete") {
+            console.log("two");
+            return false;
+        }
     } else {
         console.log("nothing is selected");
     }
 }
 
 confirmBtn.onclick=function(){
-    checkSelection();
+    console.log(checkSelection());
+
+    if(checkSelection()) {
+        console.log("happy");
+    } else {
+        console.log("sad");
+    }
+    //checkSelection();
 }
 
 
