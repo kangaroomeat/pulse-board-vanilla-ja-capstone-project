@@ -1,4 +1,4 @@
-//do somrhing with content editable
+//do something with content editable
 
 //var addTaskBtn = document.querySelector(".add-task-btn");
 var addTaskBtn = document.querySelector("#task-btn");
@@ -13,6 +13,22 @@ toDoCard.appendChild(ulTag);
 const testBtn = document.getElementById("test-btn");
 const popUpBox = document.querySelector(".pop-up");
 
+
+const allCheckboxes = document.querySelectorAll("input[name='option']");
+
+//only one checkbox can be checked at a time
+allCheckboxes.forEach(checkbox=> {
+    checkbox.addEventListener('change', function() {
+        if(this.checked) {
+            //uncheck all other checkboxes
+            allCheckboxes.forEach(cb=> {
+                if(cb !== this) {
+                    cb.checked = false;
+                }
+            })
+        }
+    })
+})
 
 
 
@@ -71,6 +87,7 @@ function checkCheckbox() {
 
 testBtn.onclick=function(){
 
+    
     if(checkCheckbox()) {
         console.log("checkbox value is: " + checkCheckbox());
         pTag = document.createElement("p");
@@ -85,8 +102,10 @@ testBtn.onclick=function(){
       
     }
 
+    //remove li tag from DOM
     if(deleteTask()) {
         console.log("it works!");
+        liTag.remove();
     }
 
 
@@ -123,6 +142,11 @@ function transferFromToDoToInProgress() {
 
 checkbox.onclick=function() {
     console.log("clicked");
+    testBtn.style.display="block";
+}
+
+deleteTaskCheckbox.onclick=function(){
+    console.log("delete clicked");
     testBtn.style.display="block";
 }
 
