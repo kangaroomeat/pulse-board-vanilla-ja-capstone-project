@@ -110,7 +110,9 @@ testBtn.onclick=function(){
 
 
 
-    popUpBox.checked = false;
+    
+    checkbox.checked = false;
+    deleteTaskCheckbox.checked = false;
     popUpBox.dispatchEvent(new Event("change"));
     popUpBox.style.display = "none";
     testBtn.style.display = "none";
