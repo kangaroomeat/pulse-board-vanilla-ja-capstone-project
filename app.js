@@ -110,6 +110,10 @@ testBtn.onclick=function(){
         liTag.remove();
     }
 
+    inProgressCard.onclick=function(){
+        console.log("it works");
+    }
+
 
 
     
@@ -187,8 +191,7 @@ confirmBtn.onclick=function(){
     //checkSelection();
 }
 
-if(inProgressCard.liTag){
-    console.log("bingo bongo");
-}
+
+//console.log(inProgressCard.innerHTML);
 
 
