@@ -7,6 +7,8 @@ var toDoCard = document.querySelector(".to-do");
 
 var inProgressCard = document.querySelector(".in-progress");
 
+var doneCard = document.querySelector(".done");
+
 const ulTag = document.createElement("ul");
 toDoCard.appendChild(ulTag);
 
@@ -183,6 +185,10 @@ confirmBtn.onclick=function(){
         console.log("sad");
     }
     //checkSelection();
+}
+
+if(inProgressCard.liTag){
+    console.log("bingo bongo");
 }
 
 
