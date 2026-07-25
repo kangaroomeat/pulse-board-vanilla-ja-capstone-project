@@ -110,8 +110,12 @@ testBtn.onclick=function(){
         liTag.remove();
     }
 
-    inProgressCard.onclick=function(){
+    /*inProgressCard.onclick=function(){
         console.log("it works");
+    }*/
+
+    pTag.onclick=function(){
+        console.log("task completed");
     }
 
 
