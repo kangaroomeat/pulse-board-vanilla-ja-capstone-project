@@ -193,5 +193,14 @@ confirmBtn.onclick=function(){
 
 
 //console.log(inProgressCard.innerHTML);
+var textbox = document.getElementById("textbox");
+var enterButton = document.getElementById("enter-button");
 
-
+enterButton.onclick=function(){
+    console.log(textbox.value);
+    if(textbox.value === "ernie") {
+        console.log("correct");
+    } else {
+        console.log("wrong");
+    }
+}
