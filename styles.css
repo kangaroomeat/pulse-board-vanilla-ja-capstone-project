@@ -71,6 +71,17 @@ select {
     /*display: block;*/
 }
 
+.pop-up-two {
+    width: 10%;
+    background-color: rgb(34, 33, 33);
+    color: white;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 0 auto;
+    text-align: center;
+    display: none;
+}
+
 #test-btn {
     background-color: green;
     margin: 0 auto;

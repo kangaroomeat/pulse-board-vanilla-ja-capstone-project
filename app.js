@@ -15,6 +15,8 @@ toDoCard.appendChild(ulTag);
 const testBtn = document.getElementById("test-btn");
 const popUpBox = document.querySelector(".pop-up");
 
+const popUpBoxTwo = document.querySelector(".pop-up-two");
+
 
 const allCheckboxes = document.querySelectorAll("input[name='option']");
 
@@ -116,7 +118,13 @@ testBtn.onclick=function(){
 
     pTag.onclick=function(){
         console.log("task completed");
+        popUpBoxTwo.style.display = "block";
+       
     }
+
+     if(popUpBoxTwo.checked) {
+            console.log("2 is checked");
+        }
 
 
 
