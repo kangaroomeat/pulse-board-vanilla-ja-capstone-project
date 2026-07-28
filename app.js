@@ -122,9 +122,7 @@ testBtn.onclick=function(){
        
     }
 
-     if(popUpBoxTwo.checked) {
-            console.log("2 is checked");
-        }
+     
 
 
 
@@ -140,6 +138,11 @@ testBtn.onclick=function(){
     
     
 }
+
+document.getElementById("addToCompleted").onclick=function(){
+    console.log("p2 selected");
+}
+
 
 const deleteTaskCheckbox = document.getElementById("delete");
 
