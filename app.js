@@ -119,6 +119,7 @@ testBtn.onclick=function(){
     pTag.onclick=function(){
         console.log("task completed");
         popUpBoxTwo.style.display = "block";
+
        
     }
 
@@ -141,6 +142,10 @@ testBtn.onclick=function(){
 
 document.getElementById("addToCompleted").onclick=function(){
     console.log("p2 selected");
+    
+    doneCard.appendChild(pTag);
+    popUpBoxTwo.style.display = "none";
+    this.checked = false;
 }
 
 
