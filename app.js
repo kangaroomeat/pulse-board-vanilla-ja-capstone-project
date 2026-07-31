@@ -20,6 +20,8 @@ const popUpBoxTwo = document.querySelector(".pop-up-two");
 
 const allCheckboxes = document.querySelectorAll("input[name='option']");
 
+const completeTaskConfirmBtn = document.getElementById("complete-task-confirm-button");
+
 //only one checkbox can be checked at a time
 allCheckboxes.forEach(checkbox=> {
     checkbox.addEventListener('change', function() {
@@ -143,9 +145,18 @@ testBtn.onclick=function(){
 document.getElementById("addToCompleted").onclick=function(){
     console.log("p2 selected");
     
-    doneCard.appendChild(pTag);
+    /*doneCard.appendChild(pTag);
     popUpBoxTwo.style.display = "none";
-    this.checked = false;
+    this.checked = false;*/
+    completeTaskConfirmBtn.style.display = "block";
+
+    completeTaskConfirmBtn.onclick=function(){
+        doneCard.appendChild(pTag);
+        popUpBoxTwo.style.display = "none";
+        this.checked = false;
+        completeTaskConfirmBtn.style.display = "none";
+
+    }
 }
 
 
