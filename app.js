@@ -142,7 +142,9 @@ testBtn.onclick=function(){
     
 }
 
-document.getElementById("addToCompleted").onclick=function(){
+var addToCompletedBox = document.getElementById("addToCompleted");
+
+addToCompletedBox.onclick=function(){
     console.log("p2 selected");
     
     /*doneCard.appendChild(pTag);
@@ -153,7 +155,7 @@ document.getElementById("addToCompleted").onclick=function(){
     completeTaskConfirmBtn.onclick=function(){
         doneCard.appendChild(pTag);
         popUpBoxTwo.style.display = "none";
-        this.checked = false;
+        addToCompletedBox.checked = false;
         completeTaskConfirmBtn.style.display = "none";
 
     }
