@@ -70,7 +70,13 @@ addTaskBtn.onclick=function() {
        
 
    }
+
+   /*liTag.onclick=function(){
+    console.log("li clicked");
+}*/
 }
+
+
 
 function createLiElement() {
     liTag = document.createElement("li");
@@ -79,6 +85,8 @@ function createLiElement() {
     liTag.setAttribute("contentEditable", "true");
 
 }
+
+
 
 const checkbox = document.querySelector("#addToProgress")
 
