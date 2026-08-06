@@ -80,7 +80,7 @@ addTaskBtn.onclick=function() {
 
 function createLiElement() {
     liTag = document.createElement("li");
-    liTag.innerText = "li tag";
+    liTag.innerText = "";
     ulTag.appendChild(liTag);
     liTag.setAttribute("contentEditable", "true");
 
@@ -108,7 +108,7 @@ testBtn.onclick=function(){
         pTag.innerText = liTag.innerText;
         liTag.style.display = "none";
         inProgressCard.appendChild(pTag);
-        console.log(liTag);
+        console.log(liTag.innerText);
         
         //inProgressCard.innerHTML = liTag;
 
