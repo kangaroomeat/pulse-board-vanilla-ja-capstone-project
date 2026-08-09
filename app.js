@@ -40,28 +40,16 @@ allCheckboxes.forEach(checkbox=> {
 
 
 addTaskBtn.onclick=function() {
-    /*console.log("button pressed");*/
+    
     createLiElement();
     
-    /*var timeOutId;
+    
 
-    liTag.onmouseenter=function(){
-           timeOutId =  setTimeout(() => {
-            console.log("hi");
-            popUpBox.style.display = "block";
+  
 
-        }, 2000);
-
-        console.log("timeout id: " + timeOutId);
-        
-
-    }
-
-    liTag.onmouseleave=function() {
-        
-        clearTimeout(timeOutId);
-        popUpBox.style.display = "none";
-    }*/
+    liTag.onclick=function(){
+    console.log(this.innerText);
+}
 
    liTag.ondblclick=function(){
         console.log("double click works");
@@ -71,9 +59,7 @@ addTaskBtn.onclick=function() {
 
    }
 
-   /*liTag.onclick=function(){
-    console.log("li clicked");
-}*/
+  
 }
 
 
